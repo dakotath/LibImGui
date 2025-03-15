@@ -77,4 +77,4 @@ export(EXPORT ${PROJECT_NAME}Targets FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT
 install(EXPORT ${PROJECT_NAME}Targets DESTINATION lib/cmake/${PROJECT_NAME})
 
 # Add the examples directory
-add_subdirectory(examples)
+# add_subdirectory(examples)
