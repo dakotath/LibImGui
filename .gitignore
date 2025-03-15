@@ -2,3 +2,4 @@
 *.dol
 build/
 lib/
+pkgbuild_test/
