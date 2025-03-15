@@ -19,12 +19,10 @@ build() {
     export CXXFLAGS=""
     export LDFLAGS=""
 
-    /opt/devkitpro/portlibs/wii/bin/powerpc-eabi-cmake -S . -B build
-    cd build
-    make -j$(nproc)
+    /opt/devkitpro/portlibs/wii/bin/powerpc-eabi-cmake -S . -B build -DCMAKE_C_COMPILER_WORKS=1 -DCMAKE_CXX_COMPILER_WORKS=1
 }
 
 package() {
     cd "$srcdir/libImGui/build"
-    make DESTDIR="$pkgdir" install
+    make DESTDIR="$pkgdir" install -j$(nproc)
 }
